@@ -1,0 +1,11 @@
+.env
+.env.*
+__pycache__
+*.pyc
+.git
+.gitignore
+uploads/*
+!uploads/.gitkeep
+.cursor
+*.md
+!README.md

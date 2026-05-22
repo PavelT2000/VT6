@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Вход — Lab6{% endblock %}
+{% block content %}
+<h1>Вход</h1>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+<form method="post" action="/login">
+    <label for="username">Логин</label>
+    <input type="text" id="username" name="username" required autofocus>
+
+    <label for="password">Пароль</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="source">Источник учётных данных</label>
+    <select id="source" name="source" required>
+        <option value="file">Текстовый файл (users.txt)</option>
+        <option value="mysql">База данных MySQL</option>
+    </select>
+
+    <button type="submit">Войти</button>
+</form>
+{% endblock %}
